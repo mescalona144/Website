@@ -1,0 +1,477 @@
+/* General Rules */
+*{
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+}
+body{
+    margin: 0;
+}
+img{
+    display: block;
+    width: 100%;
+}
+/* Main*/
+.main-header__container{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.main-header__container img{
+    width: 20%;
+    height: 50;
+}
+.main-header__title{
+    text-align:center;
+    font-size: 2.5em;
+    margin: 10px 0;
+    color: #1c1c74;
+}
+.main-header__link{
+    color: rgb(245, 68, 68);
+    padding-right: 30px;
+}
+
+/* Estilos del Menu*/
+
+.main-nav{
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+    z-index: 999999;    
+}
+.menu{
+    position: absolute;
+    top: 200px;
+    left: 0;
+    background: #212121;
+    width: 100%;
+    list-style: none;
+    padding: 5px;
+    margin: 0;  
+}
+.menu__item{
+    text-align: center;
+    margin: auto;
+}
+.menu__link{
+    padding: 30px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: block;
+}
+.menu__link:hover{
+    background: white;
+    color: #212121;
+}
+.mostrar{
+    opacity: 1;
+    visibility: visible;
+}
+.icon-menu{
+    font-size: 1.5rem;
+    border: 1.8px solid #1c1cb4;
+    display: block;
+    padding: 5px 10px;
+    border-radius: .5rem;
+    cursor: pointer;
+    margin-left: auto;
+}
+.icon-menu:hover{ background:#4f4fee;
+}
+.main-header__btn{
+    display: flex;
+    padding: 10px 25px;
+    color: #4f4fee;
+    border: 1px solid #454546;
+    text-decoration: none;
+    border-radius: .5rem;
+}
+.main-header__btn:hover{
+    background: rgb(245, 215, 45);
+}
+
+.main{
+    padding: 0 30px;
+}
+
+/* Estilos del Slider */
+
+.container-slider{
+    margin: 10% 0%;
+    position: relative;
+    overflow: hidden;     
+}
+.slider {
+    display: flex;
+    width: 400%;
+    height: 400px;
+    margin-left: -100%;
+    position: relative;
+}
+.slider:before{
+    content:"";
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top:0;
+    left:0;
+    background: rgba (0, 0, 0, 0.5);
+    height: 100%;
+}
+.slider__section {
+    width: 100%;
+    position:relative;
+}
+.slider__img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slider__btn{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.7);
+    top: 40%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999;
+}
+.slider__btn:hover {
+    background: #fff;
+}
+.slider__btn--left {
+    left: 10px;
+}
+.slider__btn--right {
+    right: 10px;
+}
+.slider__content{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    width: 60%;
+    text-align: center;
+    z-index: 999;
+}
+.slider__title{
+    font-size: 2.2rem;
+    margin:0;
+}
+.slider__text{
+    margin: 5px, 0;
+}
+/* Estilos de los productos */
+
+.container-products{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:15px;
+}
+.product{
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center; 
+    position: relative; 
+}
+.product:before {
+    content: "New";
+    background: #FF4E00;
+    padding: 10px;
+    width: 60px;
+    top: 20px;
+    right: 10px;
+    color:white;
+}
+.product__img{
+    width: 80%;
+    height: 220px;
+}
+.product__title{
+    text-align: center;
+}
+.product__price{
+    color: #FF4E00;
+    font-weight: bold;
+}
+.product__icon{
+    display: block;
+    margin-top: 10px;
+}
+.product:hover .product__icon:hover{
+    color: #FF4E00;
+}
+
+/* Área de Testimonial */
+.container__testimonials{
+    text-align: center;
+    background: #cec9c9;
+    padding: 20px;
+    margin: 20px 0;;
+}
+.testimonial__txt{
+    color: rgb(136, 66, 66);
+}
+
+/* Imagenes con efecto */
+
+.container-editor{
+    margin-top: 20px;
+    position: relative;
+}
+.editor__item{
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+.editor__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.editor__circle{
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    bottom: -100px;
+    right: -250px;
+    color: white;
+    padding: 20px;
+    padding-bottom: 70px;
+    padding-right: 50px;
+    font-size: 1.1em;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+.editor__item:hover .editor__circle{
+    transform: scale(1.2);
+    bottom: -40;
+    right: -40px;
+}
+/* Efecto hover y opacity en los círculos */
+
+.editor__item:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(248, 245, 245, 0.4);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.editor__item:hover:before{
+    opacity: 1;
+}
+/* Contenedor Tips */
+
+.container-tips{
+    margin: 20px 0;
+    text-align: center;
+}
+.tip i{
+    font-size: 2rem;
+    padding: 20px 0;
+    color: #333;
+}
+.tip .btn-shop{
+    color: #333;
+}
+.tip .btn-shop:hover{
+    color: #fff;
+}
+
+/* Botones del slider */
+.btn-shop{
+    display: block;
+    border: 1px solid #FF4E00;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 150px;
+    margin: 20px auto;
+}
+.btn-shop:hover {
+    background: rgb(245, 215, 45);
+    color: #fff;
+}
+
+/* Footer*/
+.main-footer{
+    background: #151515;
+    color: white;
+    padding: 30px 20px;
+}
+.footer__title{
+    border-bottom: 1px dotted #555;
+    padding-bottom: 10px;
+}
+.footer__txt{
+    margin: 10px;
+    color: #555;
+}
+.footer__link{
+    text-decoration: none;
+    display: block;
+    color: #555;
+    padding: 10px 0px;
+}
+.footer__input{
+    background: #151515;
+    width: 100%;
+    display: block;
+    padding: 20px;
+    border: 1px solid #555;
+}
+.copy{
+    color: #555;
+}
+.footer__section a{
+    text-decoration: none;
+    color:rgb(245, 215, 45);
+    padding: 10;
+}
+.footer__section p{
+    color:#555;
+}
+/* Web Responsive Design */
+@media screen and (min-width: 576px){
+    .slider{
+        height: 400px;
+    }
+    .editor__item{
+        height: 250px;
+    }
+}
+@media screen and (min-width: 768px){
+    
+    .icon-menu{
+        display: none;
+    }
+    .main-header__title{
+        width: 100%;
+        font-size: 4rem;
+        border-bottom: 1px solid rgb(245, 215, 45);
+    }
+    .main-header__container:nth-child(2){
+        order: -1;
+    }
+    .main-header .container--flex{
+        display: flex;  
+    }
+    .main-header__container{
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+    .main-header__container img{
+        width: 10%;
+        height: 100px;
+    }
+    .main-header__btn, .main-header__link{
+        display: none;
+    }
+    .main-nav{
+        visibility: visible;
+        opacity: 1;
+        width: 100%;
+    }
+    .menu{
+        position: static;
+        width: 100%;
+        display: flex;
+        background: none;
+    }
+    .menu__link{
+        color:#333;
+    }
+    .main-nav:hover{
+        color: #333;
+    }
+    .menu__link:hover{
+        background: #333;
+        color: #fff;
+    }
+    .container-products{
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 15px;
+    }
+    .container-tips{
+        margin: 5px 0;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    
+    }
+    .main-footer{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .copy{
+        grid-column-start: span 4;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .container{
+        width: 1000px;
+        margin: auto;
+    }
+    .icon-menu{
+        display: none;
+    }
+    .main-header .container--flex{
+        display: flex;
+
+    }
+    .main-header__container img{
+        width: 15%;
+        height: 180px;
+    }
+    .main-nav{
+        visibility: visible;
+        opacity: 1;
+    }
+    .menu{
+        position: static;
+        width: 100%;
+        display: flex;
+    }
+    .container-slider{
+        margin: 10px;
+    }
+    .slider{
+        height: 600px;
+    }
+    .slider__btn{
+        position: absolute;
+        top: 300px;        
+    }
+    .container-products{
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 15px;
+    }
+    .container-editor {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+}
